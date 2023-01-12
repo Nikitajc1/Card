@@ -13,22 +13,22 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CardTest {
-//    WebDriver driver;
-//
-//    @BeforeAll
-//    static void setupAll() {
-//        System.setProperty("webdriver.chrome.driver", "./driver/lin/chromedriver");
-//    }
-//
-//    @BeforeEach
-//    void setup() {
-//        driver = new ChromeDriver();
-//    }
-//
-//    @AfterEach
-//    void teardown() {
-//        driver.quit();
-//    }
+    WebDriver driver;
+
+    @BeforeAll
+    static void setupAll() {
+        WebDriverManager.chromedriver().setup();
+    }
+
+    @BeforeEach
+    void setup() {
+        driver = new ChromeDriver();
+    }
+
+    @AfterEach
+    void teardown() {
+        driver.quit();
+    }
 
     @Test
     void testCard() {
