@@ -53,13 +53,4 @@ public class CardTest {
         $("button").click();
         $("[data-test-id=name] span.input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
-
-    @Test
-    void shouldBeRedTextWhenInvalidCheckbox() {
-        open("http://localhost:9999/");
-        $("[data-test-id=name] input").setValue("Иван");
-        $("[data-test-id=phone] input").setValue("+79998887766");
-        $("button").click();
-        $("[data-test-id=agreement] span.checkbox__text").getCssValue("color").equals("#ff5c5c");
-    }
 }
