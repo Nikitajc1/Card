@@ -12,11 +12,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CardTest {
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeAll
     static void setupAll() {
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "./driver/lin/chromedriver");
     }
 
     @BeforeEach
