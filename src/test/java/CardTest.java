@@ -17,7 +17,7 @@ public class CardTest {
 
     @BeforeAll
     static void setupAll() {
-        System.setProperty("webdriver.chrome.driver", ".driver/lin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "./driver/lin/chromedriver");
     }
 
     @BeforeEach
